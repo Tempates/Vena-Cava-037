@@ -267,7 +267,7 @@ while True:
         print("--------------------------------------------------------")
         choice = input("")
         if choice == "Clock":
-            print("11:99")
+            print("11:99 AM")
             time.sleep(2)
         elif choice == "Inventory":
             print(inventory)
