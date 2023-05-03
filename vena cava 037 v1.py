@@ -77,12 +77,13 @@ def Phone():
                             endingsQuery = True
                             print(name+": Hello, Can you tell me all the endings of this game?")
                             time.sleep(1)
-                            print("L. Cole: Well, there are about 4 endings of this game, you should unlock them in the order i tell you")
+                            print("L. Cole: Well, there are about 5 endings of this game, you should unlock them in the order i tell you")
                             time.sleep(3)
                             print("--------------------------------------------------------")
                             print("L. Cole: There is the NORMAL ending")
                             print("L. Cole: There is the JUVENILE ending")
                             print("L. Cole: There is the INSANITY ending")
+                            print("L. Cole: There is PRESLEY'S ending")
                             print("L. Cole: The other ending i'm not allowed to tell you about")
                             print("--------------------------------------------------------")
                             time.sleep(5)
@@ -92,7 +93,8 @@ def Phone():
                                 print("A - Tell me about the NORMAL ending")
                                 print("B - Tell me about the JUVENILE ending")
                                 print("C - Tell me about the INSANITY ending")
-                                print("D - Only four endings?")
+                                print("D - Tell me about PRESLEY'S ending")
+                                print("E - Only five endings?")
                                 print("--------------------------------------------------------")
                                 choice = input("")
 
@@ -105,11 +107,13 @@ def Phone():
                                 elif choice == "C":
                                     print("L. Cole: The INSANITY ending is a sub-ending of the juvenile ending, so if you know how to get the juvenile ending, which you should get before you try the insanity ending, you should be able to get the insanity ending by doing something new...")
                                     time.sleep(10)
-                                elif choice == "D":
+                                elif choice == "E":
                                     print("L. Cole: Shut up")
                                     time.sleep(2)
                                     endingsQuery = False
-
+                                elif choice == "D":
+                                    print("L. Cole: Let's just say that Presley has been working on an interesting machine")
+                                    time.sleep(5)
                         elif choice == "C":
                             print("L. Cole: I'm not allowed to tell you")
                             time.sleep(2)
@@ -203,6 +207,7 @@ def Phone():
             print("Normal Ending")
             print("Juvenile Ending")
             print("Insanity Ending")
+            print("Presley's Ending")
             print("[REDACTED] Ending")
             print("Abduction Ending")
             print("")
@@ -232,6 +237,8 @@ while True:
         endingsQuery = bool(False)
         Exited = bool(False)
         Abduction = bool(False)
+        PresleysMachine = bool(False)
+        BrokenMachine = bool(False)
 
         #Areas
         liddle = bool(True)
@@ -267,7 +274,7 @@ while True:
         print("--------------------------------------------------------")
         choice = input("")
         if choice == "Clock":
-            print("11:99 AM")
+            print(name+": 11:99 AM, 3/5/23, wow, i wonder what the world will be like ten years from now")
             time.sleep(2)
         elif choice == "Inventory":
             print(inventory)
@@ -374,6 +381,7 @@ while True:
                     print("Normal Ending")
                     print("Juvenile Ending")
                     print("Insanity Ending")
+                    print("Presley's Ending")
                     print("[REDACTED] Ending")
                     print("✌♌♎◆♍⧫♓□■ Ending")
                     print("")
@@ -424,6 +432,7 @@ while True:
                     print("Normal Ending")
                     print("Juvenile Ending")
                     print("Insanity Ending")
+                    print("Presley's Ending")
                     print("[REDACTED] Ending")
                     print("✌♌♎◆♍⧫♓□■ Ending")
                     print("")
@@ -495,6 +504,7 @@ while True:
                     print("Normal Ending")
                     print("Juvenile Ending")
                     print("Insanity Ending")
+                    print("Presley's Ending")
                     print("[REDACTED] Ending")
                     print("✌♌♎◆♍⧫♓□■ Ending")
                     print("")
@@ -531,6 +541,7 @@ while True:
                     print("Normal Ending")
                     print("Juvenile Ending")
                     print("Insanity Ending")
+                    print("Presley's Ending")
                     print("[REDACTED] Ending")
                     print("✌♌♎◆♍⧫♓□■ Ending")
                     print("")
@@ -789,6 +800,7 @@ while True:
                 print("Normal Ending")
                 print("Juvenile Ending")
                 print("Insanity Ending")
+                print("Presley's Ending")
                 print("McIntyre's Ending")
                 print("✌♌♎◆♍⧫♓□■ Ending")
                 print("")
@@ -906,20 +918,127 @@ while True:
                     print("Presley: Thank you for returning my broomstick, you are welcome here anytime")
                     time.sleep(1)
                     print("--------------------------------------------------------")
-                    print("A - You're welcome")
-                    print("B - Can i get another 50p?")
-                    print("C - No, thank you for the money.")
+                    print("A - Hey presley, do you have any kids?")
+                    print("B - Tell me an epic fact about you.")
+                    if BrokenMachine == False:
+                        print("C - Can i get another 50p?")
                     print("--------------------------------------------------------")
                     choice = input("")
                     
                     if choice == "A":
-                        print("*Presley smiles and nods*")
+                        print("Presley: Yes, I have a son, his name is Duane, we always say that if there is ever an apocalypse, then we will hideout in the school.")
                         time.sleep(1)
-                    elif choice == "B":
-                        print("Presley: No, that was the only 50p i had, i'm saving for Jordans")
-                        time.sleep(1)
-                    elif choice == "C":   
-                        print("Presley: My guy")
+                    elif BrokenMachine == False:
+                        if choice == "C":
+                            print("Presley: I would if i could, but all my savings are going into this dusty old machine, do you want to test it out?")
+                            time.sleep(3)
+                            PresleysMachine = True
+                            while PresleysMachine == True:
+                                print("--------------------------------------------------------")
+                                print("A - Yes")
+                                print("B - No")
+                                print("--------------------------------------------------------")
+                                choice = input("")
+                                if choice == "A":
+                                    print("You walk to the corner of the closet and you pick up the dusty helmet")
+                                    time.sleep(2)
+                                    print("You blow off the dust and stick it on your head")
+                                    time.sleep(2)
+                                    print("It's like a VR headset! The visuals open with the words 'Presley Inc.' and as the branding fades away, it asks you for a date")
+                                    time.sleep(3)
+                                    print("--------------------------------------------------------")
+                                    Day = input("Enter Day: ")
+                                    Month = input("Enter Month: ")
+                                    Year = input("Enter Year (must be full year e.g: 2001): ")
+                                    print("--------------------------------------------------------")
+                                    Date = str(Day)+str(Month)+str(Year)
+                                    if Date == "352033":
+                                        PresleysMachine = False
+                                        #MY GUY ENDING
+                                        print("The machine starts to rumble, and you feel the ground beneath you fade away")
+                                        time.sleep(4)
+                                        print("The screen on the machine turns white, and you wake up on the ground")
+                                        time.sleep(4)
+                                        print("You take off the helmet, and you're in the janitors closet, there's empty tins of soup all over the floor, what happened here?")
+                                        time.sleep(5)
+                                        print("you exit the janitors closet and you see that the whole school is in ruin, there are fungal spores growing all over the walls, and the sky is green?")
+                                        time.sleep(6)
+                                        print("You are walking around and you hear a something burst open the door to exit the school")
+                                        time.sleep(5)
+                                        print("You hide in Mr Liddle's classroom, and you can hear a voice you know speaking as he walks through the hallways")
+                                        time.sleep(6)
+                                        print("Presley: This is where I lived with Duane before he died...")
+                                        time.sleep(3)
+                                        print(name+": Presley?")
+                                        time.sleep(2)
+                                        print("Presley: Who are you???")
+                                        time.sleep(2)
+                                        print(name+": Presley, it's me, "+name+", you know me!")
+                                        time.sleep(3)
+                                        print("Presley: W-Wait a minute, i know.. who you are..")
+                                        time.sleep(3)
+                                        print("Presley: I always wondered where you went off to with that machine of mine")
+                                        time.sleep(4)
+                                        print(name+": What is even going on, what does this machine even d-")
+                                        time.sleep(4)
+                                        print("A plant tangles your feet and drags you into a fungus, the fungus is devouring you, but you grab the machine")
+                                        time.sleep(6)
+                                        print("The you stick the machine on, and press the red button at the side of it")
+                                        time.sleep(5)
+                                        print("The screen turns white, and your reality starts to fade.")
+                                        time.sleep(3)
+                                        print("...")
+                                        time.sleep(2)
+                                        print("You wake up outside the school gates with a helmet on, and you take it off")
+                                        time.sleep(3)
+                                        print("The school seems empty, you look at your watch and it's sunday!")
+                                        time.sleep(3)
+                                        print("You walk home to play Taran's fighting simulator and act like nothing happened")
+                                        inventory.append("Presley's Time Machine")
+                                        time.sleep(4)
+                                        print("--------------------------------------------------------")
+                                        print("What happened there? What happened to the school, was that a time machine? Who cares you escaped school, and that's all that matters")
+                                        print("You achieved: PRESLEY'S Ending")
+                                        print("")
+                                        print("All Endings:")
+                                        print("")
+                                        print("Normal Ending")
+                                        print("Juvenile Ending")
+                                        print("Insanity Ending")
+                                        print("Presley's Ending")
+                                        print("[REDACTED] Ending")
+                                        print("✌♌♎◆♍⧫♓□■ Ending")
+                                        print("")
+                                        print("Inventory: "+str(inventory))
+                                        print("--------------------------------------------------------")
+                                        print("Replay?")
+                                        print("--------------------------------------------------------")
+                                        print("A - Yes")
+                                        print("B - No")
+                                        print("--------------------------------------------------------")
+                                        choice = input("")
+                                        if choice == "A":
+                                            print("Replaying...")
+                                            time.sleep(2)
+                                            janitors = False
+                                            FirstTime = True
+                                        else:
+                                            janitors = False
+                                            break
+                                    else:
+                                        print("The machine starts to break and the screen displays the words: 'INVALID DATE'")
+                                        time.sleep(2)
+                                        print("Presley: My machine must be broken, hopefully one day it'll work...")
+                                        time.sleep(2)
+                                        PresleysMachine = False
+                                        BrokenMachine = True
+                                elif choice == "B":
+                                    time.sleep(1)
+                                    print("Ok")
+                                    time.sleep(1)
+                                    PresleysMachine = False
+                    elif choice == "B":   
+                        print("Presley: Did you know that I am a grandmaster in akido?")
                         time.sleep(1)
                         
             elif choice == "North":
