@@ -33,6 +33,218 @@ pas3= str(random.randint(0,9))
 pas4 = str(random.randint(0,9))
 passcode = pas1+pas2+pas3+pas4
 
+def displaymap():
+    if(hallway1 == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█║║║║║║║──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC║█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█║║║║║║║║█░░░░█║║║║║║█░░█║║║║║║█░█")
+        print("███████││█████████││││█████████││││█████████│││███████████████")
+        print("██\033[1;32;40m═══════════\033[1;37;40m█═══════════█═════════════█═════════════════════█")
+        print("█\033[1;32;40m════════════\033[1;37;40m█═══════════█═════════════█═════════════════════█")
+        print("█\033[1;32;40m══\033[1;37;40mHallway 1\033[1;32;40m=\033[1;37;40m█═Hallway 2═█══Hallway 3══█══════Hallway 4══════█")
+        print("█\033[1;32;40m════════════\033[1;37;40m█═══════════█═════════════█═════════════════════█")
+        print("██\033[1;32;40m═══════════\033[1;37;40m█═══════════█═════════════█═════════════════════█")
+        print("███████││███████════════███████││││█████████████│││││█████████")
+        print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
+        print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+    
+    elif(hallway2 == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█║║║║║║║──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC║█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█║║║║║║║║█░░░░█║║║║║║█░░█║║║║║║█░█")
+        print("███████││█████████││││█████████││││█████████│││███████████████")
+        print("██═══════════█\033[1;32;40m═══════════\033[1;37;40m█═════════════█═════════════════════█")
+        print("█════════════█\033[1;32;40m═══════════\033[1;37;40m█═════════════█═════════════════════█")
+        print("█══Hallway 1═█\033[1;32;40m═\033[1;37;40mHallway 2\033[1;32;40m=\033[1;37;40m█══Hallway 3══█══════Hallway 4══════█")
+        print("█════════════█\033[1;32;40m═══════════\033[1;37;40m█═════════════█═════════════════════█")
+        print("██═══════════█\033[1;32;40m═══════════\033[1;37;40m█═════════════█═════════════════════█")
+        print("███████││███████════════███████││││█████████████│││││█████████")
+        print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
+        print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+    
+    elif(hallway3 == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█║║║║║║║──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC║█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█║║║║║║║║█░░░░█║║║║║║█░░█║║║║║║█░█")
+        print("███████││█████████││││█████████││││█████████│││███████████████")
+        print("██═══════════█═══════════█\033[1;32;40m═════════════\033[1;37;40m█═════════════════════█")
+        print("█════════════█═══════════█\033[1;32;40m═════════════\033[1;37;40m█═════════════════════█")
+        print("█══Hallway 1═█═Hallway 2═█\033[1;32;40m══\033[1;37;40mHallway 3\033[1;32;40m══\033[1;37;40m█══════Hallway 4══════█")
+        print("█════════════█═══════════█\033[1;32;40m═════════════\033[1;37;40m█═════════════════════█")
+        print("██═══════════█═══════════█\033[1;32;40m═════════════\033[1;37;40m█═════════════════════█")
+        print("███████││███████════════███████││││█████████████│││││█████████")
+        print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
+        print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+
+    elif(hallway4 == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█║║║║║║║──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC║█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█║║║║║║║║█░░░░█║║║║║║█░░█║║║║║║█░█")
+        print("███████││█████████││││█████████││││█████████│││███████████████")
+        print("██═══════════█═══════════█═════════════█\033[1;32;40m═════════════════════\033[1;37;40m█")
+        print("█════════════█═══════════█═════════════█\033[1;32;40m═════════════════════\033[1;37;40m█")
+        print("█══Hallway 1═█═Hallway 2═█══Hallway 3══█\033[1;32;40m══════\033[1;37;40mHallway 4\033[1;32;40m══════\033[1;37;40m█")
+        print("█════════════█═══════════█═════════════█\033[1;32;40m═════════════════════\033[1;37;40m█")
+        print("██═══════════█═══════════█═════════════█\033[1;32;40m═════════════════════\033[1;37;40m█")
+        print("███████││███████════════███████││││█████████████│││││█████████")
+        print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
+        print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+
+    elif(liddle == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█║║║║║║║──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC║█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█║║║║║║║║█░░░░█║║║║║║█░░█║║║║║║█░█")
+        print("███████││█████████││││█████████││││█████████│││███████████████")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("█══Hallway 1═█═Hallway 2═█══Hallway 3══█══════Hallway 4══════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("███████││███████════════███████││││█████████████│││││█████████")
+        print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
+        print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+
+    elif(boysRoom == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█\033[1;32;40m║║║║║║║║\033[1;37;40m█░░░░█║║║║║║║──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC\033[1;32;40m║\033[1;37;40m█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█\033[1;32;40m║║║║║║║║\033[1;37;40m█░░░░█║║║║║║█░░█║║║║║║█░█")
+        print("███████││█████████││││█████████\033[1;32;40m││││\033[1;37;40m█████████│││███████████████")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("█══Hallway 1═█═Hallway 2═█══Hallway 3══█══════Hallway 4══════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("███████││███████════════███████││││█████████████│││││█████████")
+        print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
+        print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+
+    elif(janitors == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█║║║║║║║──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC║█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█║║║║║║║║█░░░░█║║║║║║█░░█║║║║║║█░█")
+        print("███████││█████████││││█████████││││█████████│││███████████████")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("█══Hallway 1═█═Hallway 2═█══Hallway 3══█══════Hallway 4══════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("███████\033[1;32;40m││\033[1;37;40m███████════════███████││││█████████████│││││█████████")
+        print("██░░░█\033[1;32;40m║║║║\033[1;37;40m█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
+        print("██░░░█\033[1;32;40m║║║║\033[1;37;40m█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+
+    elif(Teachers == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█\033[1;32;40m║║║║║║║\033[1;37;40m──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC║█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█║║║║║║║║█░░░░█\033[1;32;40m║║║║║║\033[1;37;40m█░░█║║║║║║█░█")
+        print("███████││█████████││││█████████││││█████████\033[1;32;40m│││\033[1;37;40m███████████████")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("█══Hallway 1═█═Hallway 2═█══Hallway 3══█══════Hallway 4══════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("███████││███████════════███████││││█████████████│││││█████████")
+        print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
+        print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+
+    elif(Nurse == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█\033[1;32;40m║║║║║║║║\033[1;37;40m█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█║║║║║║║──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█\033[1;32;40m║║║║║║║║\033[1;37;40m█░░░█Boys WC║█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█\033[1;32;40m║║║║║║║║\033[1;37;40m█░░░█║║║║║║║║█░░░░█║║║║║║█░░█║║║║║║█░█")
+        print("███████││█████████\033[1;32;40m││││\033[1;37;40m█████████││││█████████│││███████████████")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("█══Hallway 1═█═Hallway 2═█══Hallway 3══█══════Hallway 4══════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("███████││███████════════███████││││█████████████│││││█████████")
+        print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
+        print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+
+    elif(Detention == True):
+        print("--------------------------------------------------------------")
+        print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
+        print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
+        print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█║║║║║║║──║║║║║║║█░░")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC║█░░░░█Lounge████Office█░█")
+        print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█║║║║║║║║█░░░░█║║║║║║█░░█║║║║║║█░█")
+        print("███████││█████████││││█████████││││█████████│││███████████████")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("█══Hallway 1═█═Hallway 2═█══Hallway 3══█══════Hallway 4══════█")
+        print("█════════════█═══════════█═════════════█═════════════════════█")
+        print("██═══════════█═══════════█═════════════█═════════════════════█")
+        print("███████││███████════════███████││││█████████████\033[1;32;40m│││││\033[1;37;40m█████████")
+        print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█\033[1;32;40m║║║║║║║║║║║║║║║\033[1;37;40m█░░█")
+        print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█\033[1;32;40m║║║\033[1;37;40mDetention\033[1;32;40m║║║\033[1;37;40m█░░█")
+        print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█\033[1;32;40m║║║║║║║║║║║║║║║\033[1;37;40m█░░░")
+        print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
+        print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+        print("--------------------------------------------------------------")
+
+
 def Phone():
     if Exited == False:
         if liddle == True:
@@ -132,26 +344,7 @@ def Phone():
                     print(str(name)+": Hey, there's a picture of me and Rehan Ali, things have been dull since he went missing")
                     time.sleep(3)
                 elif choice == "d":
-                    print("--------------------------------------------------------")
-                    print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
-                    print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
-                    print("░░░░░█║║║║█░░░░█Nurse's █░░░█║║║║║║║║█░░░░█║║║║║║║──║║║║║║║█░░")
-                    print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█Boys WC║█░░░░█Lounge████Office█░█")
-                    print("██░░░█║║║║█░░░░█║║║║║║║║█░░░█║║║║║║║║█░░░░█║║║║║║█░░█║║║║║║█░█")
-                    print("███████││█████████││││█████████││││█████████│││███████████████")
-                    print("██═══════════█═══════════█═════════════█═════════════════════█")
-                    print("██═══════════█═══════════█═════════════█═════════════════════█")
-                    print("██═Hallway 1═█═Hallway 2═█══Hallway 3══█══════Hallway 4══════█")
-                    print("██═══════════█═══════════█═════════════█═════════════════════█")
-                    print("██═══════════█═══════════█═════════════█═════════════════════█")
-                    print("███████││███████════════███████││││█████████████│││││█████████")
-                    print("██░░░█║║║║█░░░░█Vending █░░░█║║║║║║║║█░░░░█║║║║║║║║║║║║║║║█░░█")
-                    print("██░░░█║║║║█░░░░██████████░░░█Girls WC█░░░░█║║║Detention║║║█░░█")
-                    print("░░░░░██████░░░░░░░░░░░░░░░░░██████████░░░░█║║║║║║║║║║║║║║║█░░░")
-                    print("░Janitors Closet░░░░░░░░░░░░░░░░░░░░░░░░░░█████████████████░░░")
-                    print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
-                    print("--------------------------------------------------------")
-
+                    displaymap()
                 elif choice == "e":
                     choice = input("Enter Passcode: ")
                     if choice == passcode:
@@ -168,7 +361,7 @@ def Phone():
                         time.sleep(2)
                         print("..Your Phone shines red, you got it wrong...")
             else:
-                print(str(name)+": I shouldn't be on my phone right now, I need to get ethan to the nurse")
+                print(str(name)+": I shouldn't be on my phone right now, I need to get ethan to The nurse")
                 time.sleep(1)
     else:
         if Abduction == True:
@@ -216,7 +409,7 @@ def Phone():
             quit()
             
 #start of game
-name = input("What is your name? ").capitalize
+name = input("What is your name? ").capitalize()
 while True:
     if FirstTime == True:
         #Variables
@@ -330,7 +523,7 @@ while True:
                 print("Mr Liddle: Deep Rock Galactic is a co-operative first-person shooter video game that is sure to get your adrenaline pumping. It is set in the future, where a group of dwarves has been hired to explore the depths of different planets. Players are tasked with mining resources and eliminating hostile alien creatures to keep themselves and their team safe. The game allows you to customize your character by selecting different classes, each with their own unique set of abilities and weapons")
             if vena_cava == True:
                 if choice == "d":
-                    print("Mr Liddle: Ok then, you may leave the classroom and take ethan here to the nurse, go!")
+                    print("Mr Liddle: Ok then, you may leave the classroom and take ethan here to The nurse, go!")
                     liddle = False
                     hallway1 = True
 
@@ -355,7 +548,7 @@ while True:
         if choice == "north":
             print(str(name)+": I don't want to go in there again")
             if vena_cava == True:
-                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
+                print(str(name)+": I probably shouldn't go anywhere except The nurse, this could be my key to escape")
         if choice == "west":
             if SkeletonKey == False:
                 print(str(name)+": It's locked, I need a key to escape")
@@ -563,7 +756,7 @@ while True:
                 
         if choice == "south":
             if vena_cava == True:
-                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
+                print(str(name)+": I probably shouldn't go anywhere except The nurse, this could be my key to escape")
             else:
                 hallway1 = False
                 janitors = True
@@ -600,7 +793,7 @@ while True:
                 hallway2 = False
                 hallway3 = True
             else:
-                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
+                print(str(name)+": I probably shouldn't go anywhere except The nurse, this could be my key to escape")
         elif choice == "south":
             if vena_cava == False:
                 print("There is cokes in the vending machine")
@@ -634,13 +827,13 @@ while True:
                         print("You leave")
                         time.sleep(1)
             else:
-                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
+                print(str(name)+": I probably shouldn't go anywhere except The nurse, this could be my key to escape")
         elif choice == "west":
             if vena_cava == False:
                 hallway2 = False
                 hallway1 = True
             else:
-                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
+                print(str(name)+": I probably shouldn't go anywhere except The nurse, this could be my key to escape")
         elif choice == "inventory":
             print(*inventory, sep=', ')
             time.sleep(3)
@@ -655,7 +848,7 @@ while True:
         print("--------------------------------------------------------")
         print("A - Talk to Andrew")
         print("B - Talk to Daniel")
-        print("C - Talk to nurse")
+        print("C - Talk to The nurse")
         print("South - Hallway 2")
         print("Inventory - Check inventory")
         if hasPhone == True:
@@ -696,7 +889,7 @@ while True:
                         time.sleep(4)
                         inventory.append("Lighter")
                         hasLighter = True
-                        inventory.remove("phone")
+                        inventory.remove("Phone")
                         hasPhone = False
                     else:
                         print("What is it now? You want your phone back? Thats not gonna happen, that things gonna get you killed, or worse. Always remember: There's no escape for the students")
@@ -708,11 +901,11 @@ while True:
                         
         elif choice == "c":
             if vena_cava == True:
-                print("Nurse: Hello it's me, the nurse!")
+                print("Nurse: Hello it's me, The Nurse!")
                 time.sleep(1)
-                print(str(name)+": This boy is missing the largest vein in his body! you must help!")
+                print(str(name)+": This boy is missing the largest vein in his body! You must help!")
                 time.sleep(2)
-                print("Nurse: Okay, we must get some ice on this boy immedietly, I will take him away!")
+                print("Nurse: Okay, we must get some ice on this boy immediately, I will take him away!")
                 inventory.remove("Ethan's Vena Cava")
                 vena_cava = False
                 time.sleep(3)
@@ -1274,12 +1467,13 @@ while True:
                     print("--------------------------------------------------------")
                     print("A - Cause I'm cool")
                     print("B - I have a doctors appointment")
+                    print("C - I want a whiff of his pickely odour")
                     print("--------------------------------------------------------")
                     choice = input("").lower()
 
                     if choice == "a":
                         print("Mr Osborn: To be fair, you are quite cool, but I'm not just going to let you in, I need something for doing this for you, how about you buy me a can of coke from the vending machine and come back here when you have it. Deal?")
-                        time.sleep(7)
+                        time.sleep(3.5)
                         print(str(name)+": Deal.")
                         OsbornQuest = True
                         time.sleep(1)
@@ -1290,6 +1484,15 @@ while True:
                     elif choice == "b":
                         print("Mr Osborn: Then go to the doctors not the teachers lounge")
                         time.sleep(1)
+                        Teachers = False
+                        hallway4 = True
+                    elif choice == "c":
+                        print("Mr Osborn: On one level he smells like a crisp pickle, but on another level he smells like a well seasoned Relish")
+                        time.sleep(1)
+                        print("Mr Osborn: This suggests that he was recently doused in vinegar")
+                        time.sleep(1)
+                        print("Mr Osborn: Now get out of my sight")
+                        time.sleep(1.5)
                         Teachers = False
                         hallway4 = True
 
@@ -1361,5 +1564,3 @@ while True:
         elif hasPhone == True:
             if choice == "phone":
                 Phone()
-
-
