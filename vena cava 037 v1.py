@@ -216,7 +216,7 @@ def Phone():
             quit()
             
 #start of game
-name = input("What is your name? ")
+name = input("What is your name? ").capitalize
 while True:
     if FirstTime == True:
         #Variables
@@ -1069,7 +1069,7 @@ while True:
             hallway4 = False
             Teachers = True
         elif choice == "east":
-            print("its locked from the inside, the only way to open it is from the outside")
+            print(name+": It's locked from the inside, the only way to open it is from the outside")
         elif choice == "south":
             hallway4 = False
             Detention = True
@@ -1118,7 +1118,7 @@ while True:
 
         elif choice == "c":
             if leosMoney == False:
-                print("Hello I am leo tartaglia, can you help me with my homework?")
+                print("Leo T: Hello I am leo tartaglia, can you help me with my homework?")
                 time.sleep(1)
                 print("--------------------------------------------------------")
                 print("A - Yes")
@@ -1174,9 +1174,9 @@ while True:
 
                             if choice == "b":
                                 time.sleep(1)
-                                print("Correct! That's all of the questions, thank you for helping me, dont ask me why I already know the answers")
+                                print("Leo: Correct! That's all of the questions, thank you for helping me, dont ask me why I already know the answers")
                                 time.sleep(1)
-                                print("As a reward, I will give you 50p!")
+                                print("Leo: As a reward, I will give you 50p!")
                                 inventory.append("50p")
                                 time.sleep(1)
                                 question = 0
@@ -1242,17 +1242,17 @@ while True:
                 print("Mrs McCloy: Why?")
                 time.sleep(1)
                 print("--------------------------------------------------------")
-                print("A - im not too sure")
+                print("A - I'm not too sure")
                 print("B - I have a doctors appointment")
                 print("--------------------------------------------------------")
                 choice = input("").lower()
 
                 if choice == "a":
-                    print("Well get out then")
+                    print("Mrs McCloy: Well get out then")
                     Teachers = False
                     hallway4 = True
                 elif choice == "b":
-                    print("Then why are you in the teachers lounge and not the doctors? get out")
+                    print("Mrs McCloy: Then why are you in the teachers lounge and not the doctors? get out")
                     time.sleep(1)
                     Teachers = False
                     hallway4 = True
