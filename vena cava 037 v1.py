@@ -40,7 +40,7 @@ def Phone():
             time.sleep(1)
         else:
             if vena_cava == False:
-                print("Phone")
+                print("phone")
                 print("--------------------------------------------------------")
                 print("A - Call L. Cole")
                 print("B - Look at timetable")
@@ -48,9 +48,8 @@ def Phone():
                 print("D - Look at Map")
                 print("E - Enter Passcode...")
                 print("--------------------------------------------------------")
-                choice = input("")
-
-                if choice == "A":
+                choice = input("").lower()
+                if choice == "a":
                     onPhone = True
                     print("Ringing L.Cole...")
                     time.sleep(1)
@@ -66,25 +65,25 @@ def Phone():
                         print("C - Ask him what the passcode is about")
                         print("D - Hang up")
                         print("--------------------------------------------------------")
-                        choice = input("")
+                        choice = input("").lower()
 
-                        if choice == "A":
-                            print(name+": Hello, Can i get some hints for this game?")
+                        if choice == "a":
+                            print(name+": Hello, Can I get some hints for this game?")
                             time.sleep(1)
                             print("L. Cole: idk... can you???????????")
                             time.sleep(1)
-                        elif choice == "B":
+                        elif choice == "b":
                             endingsQuery = True
                             print(name+": Hello, Can you tell me all the endings of this game?")
                             time.sleep(1)
-                            print("L. Cole: Well, there are about 5 endings of this game, you should unlock them in the order i tell you")
+                            print("L. Cole: Well, there are about 5 endings of this game, you should unlock them in the order I tell you")
                             time.sleep(3)
                             print("--------------------------------------------------------")
                             print("L. Cole: There is the NORMAL ending")
                             print("L. Cole: There is the JUVENILE ending")
                             print("L. Cole: There is the INSANITY ending")
                             print("L. Cole: There is PRESLEY'S ending")
-                            print("L. Cole: The other ending i'm not allowed to tell you about")
+                            print("L. Cole: The other ending I'm not allowed to tell you about")
                             print("--------------------------------------------------------")
                             time.sleep(5)
                             print()
@@ -96,32 +95,32 @@ def Phone():
                                 print("D - Tell me about PRESLEY'S ending")
                                 print("E - Only five endings?")
                                 print("--------------------------------------------------------")
-                                choice = input("")
+                                choice = input("").lower()
 
-                                if choice == "A":
+                                if choice == "a":
                                     print("L. Cole: Well there isn't much to tell you about, just play through the game and you'll probably get it")
                                     time.sleep(5)
-                                elif choice == "B":
+                                elif choice == "b":
                                     print("L. Cole: Juvenile prison is basically just a prison for kids, think about what you could get sent to juvenile prison for, and what character in this game would maybe try and send you there")
                                     time.sleep(8)
-                                elif choice == "C":
+                                elif choice == "c":
                                     print("L. Cole: The INSANITY ending is a sub-ending of the juvenile ending, so if you know how to get the juvenile ending, which you should get before you try the insanity ending, you should be able to get the insanity ending by doing something new...")
                                     time.sleep(10)
-                                elif choice == "E":
+                                elif choice == "e":
                                     print("L. Cole: Shut up")
                                     time.sleep(2)
                                     endingsQuery = False
-                                elif choice == "D":
+                                elif choice == "d":
                                     print("L. Cole: Let's just say that Presley has been working on an interesting machine")
                                     time.sleep(5)
-                        elif choice == "C":
+                        elif choice == "c":
                             print("L. Cole: I'm not allowed to tell you")
                             time.sleep(2)
-                        elif choice == "D":
+                        elif choice == "d":
                             print("You hang up")
                             onPhone = False
                                 
-                elif choice == "B":
+                elif choice == "b":
                     print("--------------------------------------------------------")
                     print("Monday - Computing, Computing, Computing, Lunch, Computng, Computing, Computing, Computing")
                     print("Tuesday - Computing, Computing, Computing, Lunch, Computng, Computing, Computing")
@@ -129,10 +128,10 @@ def Phone():
                     print("Thurday - Computing, Computing, Computing, Lunch, Computng, Computing, Computing")
                     print("Friday - Computing, Computing, Computing, Lunch, Computng, Computing, Computing")
                     print("--------------------------------------------------------")
-                elif choice == "C":
+                elif choice == "c":
                     print(str(name)+": Hey, there's a picture of me and Rehan Ali, things have been dull since he went missing")
                     time.sleep(3)
-                elif choice == "D":
+                elif choice == "d":
                     print("--------------------------------------------------------")
                     print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
                     print("░░░░░██████░░░░█║║║║║║║║█░░░██████████░░░░█Teachs████Cooper█░░")
@@ -153,7 +152,7 @@ def Phone():
                     print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
                     print("--------------------------------------------------------")
 
-                elif choice == "E":
+                elif choice == "e":
                     choice = input("Enter Passcode: ")
                     if choice == passcode:
                         global Abduction
@@ -169,7 +168,7 @@ def Phone():
                         time.sleep(2)
                         print("..Your Phone shines red, you got it wrong...")
             else:
-                print(str(name)+": I shouldn't be on my phone right now, i need to get ethan to the nurse")
+                print(str(name)+": I shouldn't be on my phone right now, I need to get ethan to the nurse")
                 time.sleep(1)
     else:
         if Abduction == True:
@@ -211,7 +210,7 @@ def Phone():
             print("[REDACTED] Ending")
             print("Abduction Ending")
             print("")
-            print("Inventory: "+str(inventory))
+            print("Inventory: ", *inventory, sep=', ')
             print("--------------------------------------------------------")
             time.sleep(999)
             quit()
@@ -255,7 +254,7 @@ while True:
 
         global inventory
         inventory = []
-        inventory.append("Phone")
+        inventory.append("phone")
 
         print("You wake up in from a deep slumber, you are in class and you want to escape school")
         time.sleep(1)
@@ -272,14 +271,14 @@ while True:
         print("Inventory - Check inventory")
         print("Phone - Look at your phone")
         print("--------------------------------------------------------")
-        choice = input("")
-        if choice == "Clock":
-            print(name+": 11:99 AM, 3/5/23, wow, i wonder what the world will be like ten years from now")
+        choice = input("").lower()
+        if choice == "clock":
+            print(name+": 11:99 AM, 3/5/23, wow, I wonder what the world will be like ten years from now")
             time.sleep(2)
-        elif choice == "Inventory":
-            print(inventory)
+        elif choice == "inventory":
+            print(*inventory, sep=', ')
             time.sleep(3)
-        elif choice == "Ethan":
+        elif choice == "ethan":
             print("Ethan: Okay dude, what do you want now?")
             time.sleep(3)
             print("--------------------------------------------------------")
@@ -288,54 +287,54 @@ while True:
             print("C - Tell me all about the amazing game you played yesterday")
             print("D - You can't be pooin' yourself, Ethan")
             print("--------------------------------------------------------")
-            choice = input("")
-            if choice == "A":
-                print("Ethan: Okay, that might be a bit too far dude,you better lay off before i tell mr Liddle")
+            choice = input("").lower()
+            if choice == "a":
+                print("Ethan: Okay, that might be a bit too far dude,you better lay off before I tell mr Liddle")
                 Juvenile = True
                 time.sleep(5)
-            if choice == "B":
+            if choice == "b":
                 if vena_cava == False:
                     print("Ethan: What the flip, that is mine, finders keepers! You are literally the filthy mcnasty")
                     print("You got: Ethan's Vena Cava!")
                     inventory.append("Ethan's Vena Cava")
                     vena_cava = True
                 else:
-                    print("Ethan: Broski, you already took tha from me, what do you want now?")
+                    print("Ethan: Broski, you already took that from me, what do you want now?")
                 time.sleep(5)
-            if choice == "C":
+            if choice == "c":
                 print("Ethan: Deep Rock Galactic is a co-operative first-person shooter video game that is sure to get your adrenaline pumping. It is set in the future, where a group of dwarves has been hired to explore the depths of different planets. Players are tasked with mining resources and eliminating hostile alien creatures to keep themselves and their team safe. The game allows you to customize your character by selecting different classes, each with their own unique set of abilities and weapons")
                 time.sleep(6)
-            if choice == "D":
+            if choice == "d":
                 print("Ethan: What...? Not very funny")
                 time.sleep(1)
 
-        elif choice == "Teacher":
+        elif choice == "teacher":
             print("Mr Liddle: Yes, "+str(name)+"?")
             time.sleep(1)
 
             print("--------------------------------------------------------")
-            print("A - uhhhh, mmmmm, idk")
-            print("B - can i go to the toilet?")
+            print("A - Uhhhh, mmmmm, idk")
+            print("B - Can I go to the toilet?")
             print("C - Did ethan tell you about deep rock galactic?")
             if vena_cava == True:
                 print("D - ETHAN DOES NOT HAVE A VENA CAVA I NEED TO GO TO THE NURSE WITH HIM!!!!")
             print("--------------------------------------------------------")
             
-            choice = input("")
+            choice = input("").lower()
 
-            if choice == "A":
+            if choice == "a":
                 print("Mr Liddle: Then don't waste my time")
-            if choice == "B":
-                print("Mr Liddle: idk.. can you??????")
-            if choice == "C":
+            if choice == "b":
+                print("Mr Liddle: Idk.. can you??????")
+            if choice == "c":
                 print("Mr Liddle: Deep Rock Galactic is a co-operative first-person shooter video game that is sure to get your adrenaline pumping. It is set in the future, where a group of dwarves has been hired to explore the depths of different planets. Players are tasked with mining resources and eliminating hostile alien creatures to keep themselves and their team safe. The game allows you to customize your character by selecting different classes, each with their own unique set of abilities and weapons")
             if vena_cava == True:
-                if choice == "D":
-                    print("Mr Liddle: ok then, you may leave the classroom and take ethan here to the nurse, go!")
+                if choice == "d":
+                    print("Mr Liddle: Ok then, you may leave the classroom and take ethan here to the nurse, go!")
                     liddle = False
                     hallway1 = True
 
-        elif choice == "Phone":
+        elif choice == "phone":
             Phone()
             
     #Runs in Hallway 1
@@ -351,15 +350,15 @@ while True:
         if hasPhone == True:
             print("Phone - Check Phone")
         print("--------------------------------------------------------")
-        choice = input("")
+        choice = input("").lower()
 
-        if choice == "North":
+        if choice == "north":
             print(str(name)+": I don't want to go in there again")
             if vena_cava == True:
-                print(str(name)+": i probably shouldn't go anywhere except the nurse, this could be my key to escape")
-        if choice == "West":
+                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
+        if choice == "west":
             if SkeletonKey == False:
-                print(str(name)+": It's locked, i need a key to escape")
+                print(str(name)+": It's locked, I need a key to escape")
                 time.sleep(1)
             else:
                 Exited = True
@@ -385,15 +384,15 @@ while True:
                     print("[REDACTED] Ending")
                     print("✌♌♎◆♍⧫♓□■ Ending")
                     print("")
-                    print("Inventory: "+str(inventory))
+                    print("Inventory: ", *inventory, sep=', ')
                     print("--------------------------------------------------------")
                     print("Replay?")
                     print("--------------------------------------------------------")
                     print("A - Yes")
                     print("B - No")
                     print("--------------------------------------------------------")
-                    choice = input("")
-                    if choice == "A":
+                    choice = input("").lower()
+                    if choice == "a":
                         print("Replaying...")
                         time.sleep(2)
                         hallway1 = False
@@ -436,15 +435,15 @@ while True:
                     print("[REDACTED] Ending")
                     print("✌♌♎◆♍⧫♓□■ Ending")
                     print("")
-                    print("Inventory: "+str(inventory))
+                    print("Inventory: ",*inventory, sep=', ')
                     print("--------------------------------------------------------")
                     print("Replay?")
                     print("--------------------------------------------------------")
                     print("A - Yes")
                     print("B - No")
                     print("--------------------------------------------------------")
-                    choice = input("")
-                    if choice == "A":
+                    choice = input("").lower()
+                    if choice == "a":
                         print("Replaying...")
                         time.sleep(2)
                         hallway1 = False
@@ -483,7 +482,7 @@ while True:
                     time.sleep(2)
                     print("...")
                     time.sleep(2)
-                    print("Daniel: Have i ever told you the definition of insanity?")
+                    print("Daniel: Have I ever told you the definition of insanity?")
                     time.sleep(4)
                     print("Your eyes begin to shut.")
                     time.sleep(4)
@@ -508,15 +507,15 @@ while True:
                     print("[REDACTED] Ending")
                     print("✌♌♎◆♍⧫♓□■ Ending")
                     print("")
-                    print("Inventory: "+str(inventory))
+                    print("Inventory: ",*inventory, sep=', ')
                     print("--------------------------------------------------------")
                     print("Replay?")
                     print("--------------------------------------------------------")
                     print("A - Yes")
                     print("B - No")
                     print("--------------------------------------------------------")
-                    choice = input("")
-                    if choice == "A":
+                    choice = input("").lower()
+                    if choice == "a":
                         print("Replaying...")
                         time.sleep(2)
                         hallway1 = False
@@ -545,15 +544,15 @@ while True:
                     print("[REDACTED] Ending")
                     print("✌♌♎◆♍⧫♓□■ Ending")
                     print("")
-                    print("Inventory: "+str(inventory))
+                    print("Inventory: ",*inventory, sep=', ')
                     print("--------------------------------------------------------")
                     print("Replay?")
                     print("--------------------------------------------------------")
                     print("A - Yes")
                     print("B - No")
                     print("--------------------------------------------------------")
-                    choice = input("")
-                    if choice == "A":
+                    choice = input("").lower()
+                    if choice == "a":
                         print("Replaying...")
                         time.sleep(2)
                         hallway1 = False
@@ -562,20 +561,20 @@ while True:
                         hallway1 = False
                         break
                 
-        if choice == "South":
+        if choice == "south":
             if vena_cava == True:
-                print(str(name)+": i probably shouldn't go anywhere except the nurse, this could be my key to escape")
+                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
             else:
                 hallway1 = False
                 janitors = True
-        if choice == "East":
+        if choice == "east":
             hallway1 = False
             hallway2 = True
-        if choice == "Inventory":
-            print(inventory)
+        if choice == "inventory":
+            print(*inventory, sep=', ')
             time.sleep(3)
         if hasPhone == True:
-            if choice == "Phone":
+            if choice == "phone":
                 Phone()
 
     #Runs in Hallway 2
@@ -591,18 +590,18 @@ while True:
         if hasPhone == True:
             print("Phone - Check Phone")
         print("--------------------------------------------------------")
-        choice = input("")
+        choice = input("").lower()
 
-        if choice == "North":
+        if choice == "north":
             hallway2 = False
             Nurse = True
-        elif choice == "East":
+        elif choice == "east":
             if vena_cava == False:
                 hallway2 = False
                 hallway3 = True
             else:
-                print(str(name)+": i probably shouldn't go anywhere except the nurse, this could be my key to escape")
-        elif choice == "South":
+                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
+        elif choice == "south":
             if vena_cava == False:
                 print("There is cokes in the vending machine")
                 time.sleep(1)
@@ -613,8 +612,8 @@ while True:
                     print("A - Purchase a coke")
                     print("B - Don't buy a coke")
                     print("--------------------------------------------------------")
-                    choice = input("")
-                    if choice == "A":
+                    choice = input("").lower()
+                    if choice == "a":
                         inventory.append("Coke")
                         inventory.remove("50p")
                         inventory.remove("50p")
@@ -627,26 +626,26 @@ while True:
                     print("A - Purchase a coke")
                     print("B - Don't buy a coke")
                     print("--------------------------------------------------------")
-                    choice = input("")
-                    if choice == "A":
+                    choice = input("").lower()
+                    if choice == "a":
                         print(str(name)+": I don't have enough money")
                         time.sleep(1)
-                    elif choice == "B":
+                    elif choice == "b":
                         print("You leave")
                         time.sleep(1)
             else:
-                print(str(name)+": i probably shouldn't go anywhere except the nurse, this could be my key to escape")
-        elif choice == "West":
+                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
+        elif choice == "west":
             if vena_cava == False:
                 hallway2 = False
                 hallway1 = True
             else:
-                print(str(name)+": i probably shouldn't go anywhere except the nurse, this could be my key to escape")
-        elif choice == "Inventory":
-            print(inventory)
+                print(str(name)+": I probably shouldn't go anywhere except the nurse, this could be my key to escape")
+        elif choice == "inventory":
+            print(*inventory, sep=', ')
             time.sleep(3)
         elif hasPhone == True:
-            if choice == "Phone":
+            if choice == "phone":
                 Phone()
 
     #Runs in Nurse's office
@@ -662,71 +661,71 @@ while True:
         if hasPhone == True:
             print("Phone - Check Phone")
         print("--------------------------------------------------------")
-        choice = input("")
+        choice = input("").lower()
 
-        if choice == "South":
+        if choice == "south":
             if vena_cava == True:
-                print("I cant go back now, i need to save ethan, it will be my only chance to get out the school")
+                print("I cant go back now, I need to save ethan, it will be my only chance to get out the school")
             else:
                 Nurse = False
                 hallway2 = True
-        elif choice == "A":
+        elif choice == "a":
             print("Andrew: Play the Farm Diner on scratch! Farm diner 2 releasing on the 11/5/23 (not confirmed)")
-        elif choice == "B":
+        elif choice == "b":
             if vena_cava == True:
-                print("Daniel: I saw you with ethan over there, i was going to rip out his vena cava but you already did...")
+                print("Daniel: I saw you with ethan over there, I was going to rip out his vena cava but you already did...")
                 time.sleep(3)
-                print(str(name)+": Good going lad, ill talk to you later, i need to sort out this ethan situation")
+                print(str(name)+": Good going lad, ill talk to you later, I need to sort out this ethan situation")
                 time.sleep(2)
             else:
-                print("Daniel: Have i ever told you the definition of insanity")
+                print("Daniel: Have I ever told you the definition of insanity")
                 time.sleep(1)
                 print("--------------------------------------------------------")
                 print("A - No")
                 print("B - I don't care")
                 print("C - ...")
                 print("--------------------------------------------------------")
-                choice = input("")
+                choice = input("").lower()
                 
-                if choice == "A":
+                if choice == "a":
                     print("Daniel: Insanity is doing the exact... same thing... over and over again expecting... things to change... That. Is. Crazy. The first time somebody told me that, I dunno, I thought they were kidding me on, so, I shot him. The thing is... He was right. And then I started seeing, everywhere I looked, everywhere I looked all these absolute NPCs, everywhere I looked, doing the exact same thing... over and over and over and over again thinking 'this time is gonna be different' no, no, no please... This time is gonna be different!")
                     time.sleep(5)
-                elif choice == "B":
+                elif choice == "b":
                     if hasLighter == False:
-                        print("*Daniel steals your phone* I like this phone, this is a nice phone, this phone looks very expensive, that's good because i like expensive things, *puts lighter in your pocket*")
+                        print("*Daniel steals your phone* I like this phone, this is a nice phone, this phone looks very expensive, that's good because I like expensive things, *puts lighter in your pocket*")
                         time.sleep(4)
                         inventory.append("Lighter")
                         hasLighter = True
-                        inventory.remove("Phone")
+                        inventory.remove("phone")
                         hasPhone = False
                     else:
                         print("What is it now? You want your phone back? Thats not gonna happen, that things gonna get you killed, or worse. Always remember: There's no escape for the students")
                         hasPhone = False
                         time.sleep(4)
-                elif choice == "C":
-                    print("I am sorry, I don't like the way... you are looking at me! Okay? Do you have a problem in your head? Do you think im kidding you? Do you think that i am lying? SCREW YOU!")
+                elif choice == "c":
+                    print("I am sorry, I don't like the way... you are looking at me! Okay? Do you have a problem in your head? Do you think im kidding you? Do you think that I am lying? SCREW YOU!")
                     time.sleep(4)
                         
-        elif choice == "C":
+        elif choice == "c":
             if vena_cava == True:
                 print("Nurse: Hello it's me, the nurse!")
                 time.sleep(1)
                 print(str(name)+": This boy is missing the largest vein in his body! you must help!")
                 time.sleep(2)
-                print("Nurse: Okay, we must get some ice on this boy immedietly, i will take him away!")
+                print("Nurse: Okay, we must get some ice on this boy immedietly, I will take him away!")
                 inventory.remove("Ethan's Vena Cava")
                 vena_cava = False
                 time.sleep(3)
             else:
-                print("Nurse: Just a second, i'm still working on ethan")
+                print("Nurse: Just a second, I'm still working on ethan")
                 time.sleep(2)
 
-        elif choice == "Inventory":
-            print(inventory)
+        elif choice == "inventory":
+            print(*inventory, sep=', ')
             time.sleep(3)
 
         elif hasPhone == True:
-            if choice == "Phone":
+            if choice == "phone":
                 Phone()
 
     #Runs in hallway 3
@@ -742,21 +741,21 @@ while True:
         if hasPhone == True:
             print("Phone - Check Phone")
         print("--------------------------------------------------------")
-        choice = input("")
+        choice = input("").lower()
 
-        if choice == "North":
+        if choice == "north":
             hallway3 = False
             boysRoom = True
-        elif choice == "East":
+        elif choice == "east":
             hallway3 = False
             hallway4 = True
-        elif choice == "South":
+        elif choice == "south":
             if SkeletonKey == False:
                 print("It's locked")
             else:
                 # MCINTYRE'S ENDING #
 
-                print(str(name)+": Wait a minute, I've got a skeleton key, so do you think i'll be able to enter?")
+                print(str(name)+": Wait a minute, I've got a skeleton key, so do you think I'll be able to enter?")
                 time.sleep(3)
                 print("To your surprise, it works! you are greeted with a dark staircase going down, you decide to go down")
                 time.sleep(4)
@@ -804,15 +803,15 @@ while True:
                 print("McIntyre's Ending")
                 print("✌♌♎◆♍⧫♓□■ Ending")
                 print("")
-                print("Inventory: "+str(inventory))
+                print("Inventory: ",*inventory, sep=', ')
                 print("--------------------------------------------------------")
                 print("Replay?")
                 print("--------------------------------------------------------")
                 print("A - Yes")
                 print("B - No")
                 print("--------------------------------------------------------")
-                choice = input("")
-                if choice == "A":
+                choice = input("").lower()
+                if choice == "a":
                     print("Replaying...")
                     time.sleep(2)
                     hallway3 = False
@@ -821,14 +820,14 @@ while True:
                     hallway3 = False
                     break
                 
-        elif choice == "West":
+        elif choice == "west":
             hallway3 = False
             hallway2 = True
-        elif choice == "Inventory":
-            print(inventory)
+        elif choice == "inventory":
+            print(*inventory, sep=', ')
             time.sleep(3)
         elif hasPhone == True:
-            if choice == "Phone":
+            if choice == "phone":
                 Phone()
 
     #runs in the boys room
@@ -844,27 +843,27 @@ while True:
         if hasPhone == True:
             print("Phone - Check Phone")
         print("--------------------------------------------------------")
-        choice = input("")
+        choice = input("").lower()
 
-        if choice == "A":
+        if choice == "a":
             print("You knock on the cubicle...")
             time.sleep(1)
-            print("???: Sorry, i'll be just a second! I'm recording a music monday!")
+            print("???: Sorry, I'll be just a second! I'm recording a music monday!")
             time.sleep(3)
-        elif choice == "B":
+        elif choice == "b":
             if hasBroom == False:
                 print("You got the broomstick!")
                 inventory.append("Broomstick")
                 time.sleep(2)
                 hasBroom = True
-        elif choice == "South":
+        elif choice == "south":
             boysRoom = False
             hallway3 = True
-        elif choice == "Inventory":
-            print(inventory)
+        elif choice == "inventory":
+            print(*inventory, sep=', ')
             time.sleep(3)
         elif hasPhone == True:
-            if choice == "Phone":
+            if choice == "phone":
                 Phone()
     #Runs in Janitor's Closet
     while janitors == True:
@@ -878,19 +877,19 @@ while True:
             if hasPhone == True:
                 print("Phone - Check Phone")
             print("--------------------------------------------------------")
-            choice = input("")
-            if choice == "A":
+            choice = input("").lower()
+            if choice == "a":
                 print("Presley: My Guy, I'm sorry but you have to leave here")
                 janitors = False
                 hallway1 = True
-            elif choice == "North":
+            elif choice == "north":
                 janitors = False
                 hallway1 = True
-            elif choice == "Inventory":
-                print(inventory)
+            elif choice == "inventory":
+                print(*inventory, sep=', ')
                 time.sleep(3)
             elif hasPhone == True:
-                if choice == "Phone":
+                if choice == "phone":
                     Phone()
         else:
             print("Area - Janitor's Closet")
@@ -901,14 +900,14 @@ while True:
             if hasPhone == True:
                 print("Phone - Check Phone")
             print("--------------------------------------------------------")
-            choice = input("")
-            if choice == "A":
+            choice = input("").lower()
+            if choice == "a":
                 if janitorMoney == False:
                     print("Presley: My Guy, I'm sorry but you have to leave here")
                     time.sleep(1.5)
-                    print(str(name)+": I think i have your broomstick")
+                    print(str(name)+": I think I have your broomstick")
                     time.sleep(1)
-                    print("Presley: Woohoo! My guy thank you for bringing this to me, i will reward you with 50p")
+                    print("Presley: Woohoo! My guy thank you for bringing this to me, I will reward you with 50p")
                     inventory.append("50p")
                     inventory.remove("Broomstick")
                     print("You got 50p!")
@@ -921,16 +920,16 @@ while True:
                     print("A - Hey presley, do you have any kids?")
                     print("B - Tell me an epic fact about you.")
                     if BrokenMachine == False:
-                        print("C - Can i get another 50p?")
+                        print("C - Can I get another 50p?")
                     print("--------------------------------------------------------")
-                    choice = input("")
+                    choice = input("").lower()
                     
-                    if choice == "A":
+                    if choice == "a":
                         print("Presley: Yes, I have a son, his name is Duane, we always say that if there is ever an apocalypse, then we will hideout in the school.")
                         time.sleep(1)
                     elif BrokenMachine == False:
-                        if choice == "C":
-                            print("Presley: I would if i could, but all my savings are going into this dusty old machine, do you want to test it out?")
+                        if choice == "c":
+                            print("Presley: I would if I could, but all my savings are going into this dusty old machine, do you want to test it out?")
                             time.sleep(3)
                             PresleysMachine = True
                             while PresleysMachine == True:
@@ -938,8 +937,8 @@ while True:
                                 print("A - Yes")
                                 print("B - No")
                                 print("--------------------------------------------------------")
-                                choice = input("")
-                                if choice == "A":
+                                choice = input("").lower()
+                                if choice == "a":
                                     print("You walk to the corner of the closet and you pick up the dusty helmet")
                                     time.sleep(2)
                                     print("You blow off the dust and stick it on your head")
@@ -975,7 +974,7 @@ while True:
                                         time.sleep(2)
                                         print(name+": Presley, it's me, "+name+", you know me!")
                                         time.sleep(3)
-                                        print("Presley: W-Wait a minute, i know.. who you are..")
+                                        print("Presley: W-Wait a minute, I know.. who you are..")
                                         time.sleep(3)
                                         print("Presley: I always wondered where you went off to with that machine of mine")
                                         time.sleep(4)
@@ -1009,15 +1008,15 @@ while True:
                                         print("[REDACTED] Ending")
                                         print("✌♌♎◆♍⧫♓□■ Ending")
                                         print("")
-                                        print("Inventory: "+str(inventory))
+                                        print("Inventory: ",*inventory, sep=', ')
                                         print("--------------------------------------------------------")
                                         print("Replay?")
                                         print("--------------------------------------------------------")
                                         print("A - Yes")
                                         print("B - No")
                                         print("--------------------------------------------------------")
-                                        choice = input("")
-                                        if choice == "A":
+                                        choice = input("").lower()
+                                        if choice == "a":
                                             print("Replaying...")
                                             time.sleep(2)
                                             janitors = False
@@ -1032,23 +1031,23 @@ while True:
                                         time.sleep(2)
                                         PresleysMachine = False
                                         BrokenMachine = True
-                                elif choice == "B":
+                                elif choice == "b":
                                     time.sleep(1)
                                     print("Ok")
                                     time.sleep(1)
                                     PresleysMachine = False
-                    elif choice == "B":   
+                    elif choice == "b":   
                         print("Presley: Did you know that I am a grandmaster in akido?")
                         time.sleep(1)
                         
-            elif choice == "North":
+            elif choice == "north":
                 janitors = False
                 hallway1 = True
-            elif choice == "Inventory":
-                print(inventory)
+            elif choice == "inventory":
+                print(*inventory, sep=', ')
                 time.sleep(3)
             elif hasPhone == True:
-                if choice == "Phone":
+                if choice == "phone":
                     Phone()
 
     #Runs in hallway 4
@@ -1064,24 +1063,24 @@ while True:
         if hasPhone == True:
             print("Phone - Check Phone")
         print("--------------------------------------------------------")
-        choice = input("")
+        choice = input("").lower()
 
-        if choice == "North":
+        if choice == "north":
             hallway4 = False
             Teachers = True
-        elif choice == "East":
+        elif choice == "east":
             print("its locked from the inside, the only way to open it is from the outside")
-        elif choice == "South":
+        elif choice == "south":
             hallway4 = False
             Detention = True
-        elif choice == "West":
+        elif choice == "west":
             hallway4 = False
             hallway3 = True
-        elif choice == "Inventory":
-            print(inventory)
+        elif choice == "inventory":
+            print(*inventory, sep=', ')
             time.sleep(3)
         elif hasPhone == True:
-            if choice == "Phone":
+            if choice == "phone":
                 Phone()
 
     #Runs in detention
@@ -1097,40 +1096,40 @@ while True:
         if hasPhone == True:
             print("Phone - Check Phone")
         print("--------------------------------------------------------")
-        choice = input("")
+        choice = input("").lower()
 
-        if choice == "A":
+        if choice == "a":
             print("Mr Stevenson: You can't be in here, get out!")
             Detention = False
             hallway4 = True
-        elif choice == "B":
+        elif choice == "b":
             print("--------------------------------------------------------")
             print("A - Why are you in detention?")
             print("B - When is your dance battle with kate bunten")
             print("--------------------------------------------------------")
-            choice = input("")
+            choice = input("").lower()
 
-            if choice == "A":
+            if choice == "a":
                 time.sleep(1)
                 print("Scott: NEVER threaten Scott Harding with a good time..")
-            elif choice == "B":
+            elif choice == "b":
                 time.sleep(1)
                 print("Scott: 11/5/2023")
 
-        elif choice == "C":
+        elif choice == "c":
             if leosMoney == False:
-                print("Hello i am leo tartaglia, can you help me with my homework?")
+                print("Hello I am leo tartaglia, can you help me with my homework?")
                 time.sleep(1)
                 print("--------------------------------------------------------")
                 print("A - Yes")
-                print("B - i dont help catfishers")
+                print("B - I dont help catfishers")
                 print("--------------------------------------------------------")
-                choice = input("")
+                choice = input("").lower()
 
-                if choice == "B":
+                if choice == "b":
                     time.sleep(1)
-                    print("Leo T: I guess i'll get scott harding to help me, at least he can make me laugh and giggle")
-                elif choice == "A":
+                    print("Leo T: I guess I'll get scott harding to help me, at least he can make me laugh and giggle")
+                elif choice == "a":
                     homework = True
                     while homework == True:
                         while question == 1:
@@ -1143,9 +1142,9 @@ while True:
                             print("C - Vena Cava")
                             print("D - Leo Cole")
                             print("--------------------------------------------------------")
-                            choice = input("")
+                            choice = input("").lower()
 
-                            if choice == "C":
+                            if choice == "c":
                                 print("Leo T: Correct!")
                                 question = question +1
                             else:
@@ -1171,30 +1170,32 @@ while True:
                             print("B - He is fat, ugly and no one loves him")
                             print("C - Leo Cole")
                             print("--------------------------------------------------------")
-                            choice = input("")
+                            choice = input("").lower()
 
-                            if choice == "B":
+                            if choice == "b":
                                 time.sleep(1)
-                                print("Correct! That's all of the questions, thank you for helping me, dont ask me why i already know the answers")
+                                print("Correct! That's all of the questions, thank you for helping me, dont ask me why I already know the answers")
                                 time.sleep(1)
-                                print("As a reward, i will give you 50p!")
+                                print("As a reward, I will give you 50p!")
                                 inventory.append("50p")
                                 time.sleep(1)
                                 question = 0
                                 homework = False
                                 leosMoney = True
+                            else:
+                                print("Wrong!")
                                 
             else:
                 print("Leo: Back for seconds? wowee you must be desperate for money!")
 
-        elif choice == "Inventory":
-            print(inventory)
+        elif choice == "inventory":
+            print(*inventory, sep=', ')
             time.sleep(3)
-        elif choice == "North":
+        elif choice == "north":
             Detention = False
             hallway4 = True
         elif hasPhone == True:
-            if choice == "Phone":
+            if choice == "phone":
                 Phone()
 
             
@@ -1211,9 +1212,9 @@ while True:
         if hasPhone == True:
             print("Phone - Check Phone")
         print("--------------------------------------------------------")
-        choice = input("")
+        choice = input("").lower()
 
-        if choice == "A":
+        if choice == "a":
             print("Mrs McCloy: Why are you here?")
             time.sleep(1)
             print("--------------------------------------------------------")
@@ -1222,62 +1223,62 @@ while True:
             print("C - Why are YOU here?")
             print("D - Can I get in mr coopers office?")
             print("--------------------------------------------------------")
-            choice = input("")
+            choice = input("").lower()
 
-            if choice == "A":
+            if choice == "a":
                 print("Mrs McCloy: Not good enough, get out.")
                 time.sleep(1)
                 Teachers = False
                 hallway4 = True
-            elif choice == "B":
+            elif choice == "b":
                 print("Mrs McCloy: That boy is a champion, now get out.")
                 time.sleep(1)
                 Teachers = False
                 hallway4 = True
-            elif choice == "C":
+            elif choice == "c":
                 print("Mrs McCloy: Fair enough, you may stay here")
                 time.sleep(1)
-            elif choice == "D":
+            elif choice == "d":
                 print("Mrs McCloy: Why?")
                 time.sleep(1)
                 print("--------------------------------------------------------")
                 print("A - im not too sure")
                 print("B - I have a doctors appointment")
                 print("--------------------------------------------------------")
-                choice = input("")
+                choice = input("").lower()
 
-                if choice == "A":
+                if choice == "a":
                     print("Well get out then")
                     Teachers = False
                     hallway4 = True
-                elif choice == "B":
+                elif choice == "b":
                     print("Then why are you in the teachers lounge and not the doctors? get out")
                     time.sleep(1)
                     Teachers = False
                     hallway4 = True
 
-        elif choice == "B":
+        elif choice == "b":
             if OsbornQuest == False:
                 print("Mr Osborn: What are you doing here?")
                 time.sleep(1)
                 print("--------------------------------------------------------")
-                print("A - Can i get into mr coopers office")
+                print("A - Can I get into mr coopers office")
                 print("B - im not sure")
                 print("C - What are YOU doing here")
                 print("--------------------------------------------------------")
-                choice = input("")
+                choice = input("").lower()
 
-                if choice == "A":
+                if choice == "a":
                     print("Mr Osborn: Why?")
                     time.sleep(1)
                     print("--------------------------------------------------------")
                     print("A - Cause I'm cool")
                     print("B - I have a doctors appointment")
                     print("--------------------------------------------------------")
-                    choice = input("")
+                    choice = input("").lower()
 
-                    if choice == "A":
-                        print("Mr Osborn: To be fair, you are quite cool, but i'm not just going to let you in, i need something for doing this for you, how about you buy me a can of coke from the vending machine and come back here when you have it. Deal?")
+                    if choice == "a":
+                        print("Mr Osborn: To be fair, you are quite cool, but I'm not just going to let you in, I need something for doing this for you, how about you buy me a can of coke from the vending machine and come back here when you have it. Deal?")
                         time.sleep(7)
                         print(str(name)+": Deal.")
                         OsbornQuest = True
@@ -1286,17 +1287,17 @@ while True:
                         time.sleep(1)
                         Teachers = False
                         hallway4 = True
-                    elif choice == "B":
-                        print("Mr Osborn: then go to the doctors not the teachers lounge")
+                    elif choice == "b":
+                        print("Mr Osborn: Then go to the doctors not the teachers lounge")
                         time.sleep(1)
                         Teachers = False
                         hallway4 = True
 
-                elif choice == "B":
+                elif choice == "b":
                     print("Get out then")
                     Teachers = False
                     hallway4 = True
-                elif choice == "C":
+                elif choice == "c":
                     print("Mr Osborn: Okay then wise guy, stay here")
                     time.sleep(1)
             else:
@@ -1308,13 +1309,13 @@ while True:
                     if hasCoke == True:
                         print("B - Yes")
                     print("--------------------------------------------------------")
-                    choice = input("")
-                    if choice == "A":
+                    choice = input("").lower()
+                    if choice == "a":
                         print("Mr Osborn: Then go get it then")
                         Teachers = False
                         hallway4 = True
                     if hasCoke == True:
-                        if choice == "B":
+                        if choice == "b":
                             print("Mr Osborn: Go right ahead then.")
                             inventory.remove("Coke")
 
@@ -1345,20 +1346,20 @@ while True:
                             Teachers = False
                             hallway4 = True
                 else:
-                    print("Mr Osborn: You think i'm gonna let you in again? The coke doesn't taste THAT good, "+name)
+                    print("Mr Osborn: You think I'm gonna let you in again? The coke doesn't taste THAT good, "+name)
                     time.sleep(2)
                             
-        elif choice == "C":
+        elif choice == "c":
             print("You look out the window, and you see Mr McIntyre dragging a human shaped bag into a vault, strange.")
             time.sleep(5)
-        elif choice == "South":
+        elif choice == "south":
             Teachers = False
             hallway4 = True
-        elif choice == "Inventory":
-            print(inventory)
+        elif choice == "inventory":
+            print(*inventory, sep=', ')
             time.sleep(3)
         elif hasPhone == True:
-            if choice == "Phone":
+            if choice == "phone":
                 Phone()
 
 
