@@ -542,7 +542,6 @@ def Phone():
 savepath = Path("./savedata.txt")
 datapath = Path("./gamedata.txt")
 
-password()
 #checks if the savedata file exists and makes the file and adds default values 
 # if it does not exist
 if(savepath.is_file() == False):
@@ -566,7 +565,7 @@ if(savepath.is_file() == False):
     f.write("juvenile: False\n")
     f.write("hasphone: False\n")
     f.write("exited: False\n")
-    f.write("passcode: " + passcode + "\n")
+    f.write("passcode: 6969\n")
     f.write("firsttime: True\n")
     f.write("nurse: False\n")
     f.close()
