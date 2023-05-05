@@ -2,38 +2,162 @@
 import time
 import random
 import math
+import os
+from pathlib import Path
+import ast
 
-#globals
-global vena_cava
-global hallway1
-global liddle
-global hallway2
-global hasLighter
-global hallway3
-global hasBroom
-global boysRoom
-global janitors
-global hallway4
-global Detention
-global Teachers
-global homework
-global question
-global OsbornQuest
-global SkeletonKey
-global Juvenile
-global hasPhone
-global Exited
-global FirstTime
 
-FirstTime = bool(True)
+#generates passcode
+def password():
+    pas1 = str(random.randint(0,9))
+    pas2 = str(random.randint(0,9)) 
+    pas3= str(random.randint(0,9))
+    pas4 = str(random.randint(0,9))
+    passcode = pas1+pas2+pas3+pas4
 
-pas1 = str(random.randint(0,9))
-pas2 = str(random.randint(0,9)) 
-pas3= str(random.randint(0,9))
-pas4 = str(random.randint(0,9))
-passcode = pas1+pas2+pas3+pas4
+def load():
+    #globals
+    global vena_cava
+    global hallway1
+    global liddle
+    global hallway2
+    global hasLighter
+    global hallway3
+    global hasBroom
+    global boysRoom
+    global janitors
+    global hallway4
+    global Detention
+    global Teachers
+    global homework
+    global question
+    global OsbornQuest
+    global SkeletonKey
+    global Juvenile
+    global hasPhone
+    global Exited
+    global FirstTime
+    global passcode
+    global name
+    global Nurse
+    global inventory
+    inventory = []
+
+    #opens the savedata file
+    f = open("savedata.txt", "r")
+    #read variables from file
+    for line in f:
+
+        if("vena_cava: " in line):
+            #removes the prefix of the variable in the text file
+            vena_cava = line.replace("vena_cava: ", "")
+            #maps the variable from the text file to the code
+            vena_cava = ast.literal_eval(vena_cava.replace("\n", ""))
+        if("hallway1: " in line):
+            hallway1 = line.replace("hallway1: ", "")
+            hallway1 = ast.literal_eval(hallway1.replace("\n", ""))
+        if("liddle: " in line):
+            liddle = line.replace("liddle: ", "")
+            liddle = ast.literal_eval(liddle.replace("\n", ""))
+        if("hallway2: " in line):
+            hallway2 = line.replace("hallway2: ", "")
+            hallway2 = ast.literal_eval(hallway2.replace("\n", ""))
+        if("haslighter: " in line):
+            hasLighter = line.replace("haslighter: ", "")
+            hasLighter = ast.literal_eval(hasLighter.replace("\n", ""))
+        if("hallway3: " in line):
+            hallway3 = line.replace("hallway3: ", "")
+            hallway3 = ast.literal_eval(hallway3.replace("\n", ""))
+        if("hasbroom: " in line):
+            hasBroom = line.replace("hasbroom: ", "")
+            hasBroom = ast.literal_eval(hasBroom.replace("\n", ""))
+        if("boysroom: " in line):
+            boysRoom = line.replace("boysroom: ", "")
+            boysRoom = ast.literal_eval(boysRoom.replace("\n", ""))
+        if("janitors: " in line):
+            janitors = line.replace("janitors: ", "")
+            janitors = ast.literal_eval(janitors.replace("\n", ""))
+        if("hallway4: " in line):
+            hallway4 = line.replace("hallway4: ", "")
+            hallway4 = ast.literal_eval(hallway4.replace("\n", ""))
+        if("detention: " in line):
+            Detention = line.replace("detention: ", "")
+            Detention = ast.literal_eval(Detention.replace("\n", ""))
+        if("teachers: " in line):
+            Teachers = line.replace("teachers: ", "")
+            Teachers = ast.literal_eval(Teachers.replace("\n", ""))
+        if("homework: " in line):
+            homework = line.replace("homework: ", "")
+            homework = ast.literal_eval(homework.replace("\n", ""))
+        if("question: " in line):
+            question = line.replace("question: ", "")
+            question = int(question.replace("\n", ""))
+        if("osbornquest: " in line):
+            OsbornQuest = line.replace("osbornquest: ", "")
+            OsbornQuest = ast.literal_eval(OsbornQuest.replace("\n", ""))
+        if("skeletonkey: " in line):
+            SkeletonKey = line.replace("skeletonkey: ", "")
+            SkeletonKey = ast.literal_eval(SkeletonKey.replace("\n", ""))
+        if("juvenile: " in line):
+            Juvenile = line.replace("juvenile: ", "")
+            Juvenile = ast.literal_eval(Juvenile.replace("\n", ""))
+        if("hasphone: " in line):
+            hasPhone = line.replace("hasphone: ", "")
+            hasPhone = ast.literal_eval(hasPhone.replace("\n", ""))
+        if("exited: " in line):
+            Exited = line.replace("exited: ", "")
+            Exited = ast.literal_eval(Exited.replace("\n", ""))
+        if("passcode: " in line):
+            passcode = line.replace("passcode: ", "")
+            passcode = int(passcode.replace("\n", ""))
+        if("firsttime: " in line):
+            FirstTime = line.replace("firsttime: ", "")
+            FirstTime = ast.literal_eval(FirstTime.replace("\n", ""))
+        if("nurse: " in line):
+            Nurse = line.replace("nurse: ", "")
+            Nurse = ast.literal_eval(Nurse.replace("\n", ""))
+        if("name: " in line):
+            name = str(line.replace("name: ", ""))
+            name = name.replace("\n", "")
+        if("inventory: " in line):
+            inventory = line.replace("inventory: ", "")
+            inventory = inventory.replace("\n", "")
+            inventory = ast.literal_eval(inventory)
+            print(type(inventory))
+
+def save():
+    #opens savedata file
+    f = open("savedata.txt", 'w')
+
+    #writes variables to file
+
+    f.write("vena_cava: " + str(vena_cava) + "\n")
+    f.write("hallway1: " + str(hallway1) + "\n")
+    f.write("liddle: " + str(liddle) + "\n")
+    f.write("hallway2: " + str(hallway2) + "\n")
+    f.write("haslighter: " + str(hasLighter) + "\n")
+    f.write("hallway3: " + str(hallway3) + "\n")
+    f.write("hasbroom: " + str(hasBroom) + "\n")
+    f.write("boysroom: " + str(boysRoom) + "\n")
+    f.write("janitors: " + str(janitors) + "\n")
+    f.write("hallway4: " + str(hallway4) + "\n")
+    f.write("detention: " + str(Detention) + "\n")
+    f.write("teachers: " + str(Teachers) + "\n")
+    f.write("homework: " + str(homework) + "\n")
+    f.write("question: " + str(question) + "\n")
+    f.write("osbornquest: " + str(OsbornQuest) + "\n")
+    f.write("skeletonkey: " + str(SkeletonKey) + "\n")
+    f.write("juvenile: " + str(Juvenile) + "\n")
+    f.write("hasphone: " + str(hasPhone) + "\n")
+    f.write("exited: " + str(Exited) + "\n")
+    f.write("passcode: " + str(passcode) + "\n")
+    f.write("firsttime: " + str(FirstTime) + "\n")
+    f.write("nurse: " + str(Nurse) + "\n")
+    f.write("name: " + str(name) + "\n")
+    f.write("inventory: " + str(inventory) + "\n")
 
 def displaymap():
+    #checks which area you are in and displays different map depending on where you are
     if(hallway1 == True):
         print("--------------------------------------------------------------")
         print("░Mr Liddle's░░░██████████░░░░░░░░░░░░░░░░░████████░░████████░░")
@@ -244,7 +368,6 @@ def displaymap():
         print("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
         print("--------------------------------------------------------------")
 
-
 def Phone():
     if Exited == False:
         if liddle == True:
@@ -252,13 +375,14 @@ def Phone():
             time.sleep(1)
         else:
             if vena_cava == False:
-                print("phone")
+                print("Phone")
                 print("--------------------------------------------------------")
                 print("A - Call L. Cole")
                 print("B - Look at timetable")
                 print("C - Look at Photos")
                 print("D - Look at Map")
                 print("E - Enter Passcode...")
+                print("F - Save Game")
                 print("--------------------------------------------------------")
                 choice = input("").lower()
                 if choice == "a":
@@ -340,11 +464,14 @@ def Phone():
                     print("Thurday - Computing, Computing, Computing, Lunch, Computng, Computing, Computing")
                     print("Friday - Computing, Computing, Computing, Lunch, Computng, Computing, Computing")
                     print("--------------------------------------------------------")
+                
                 elif choice == "c":
                     print(str(name)+": Hey, there's a picture of me and Rehan Ali, things have been dull since he went missing")
                     time.sleep(3)
+                
                 elif choice == "d":
                     displaymap()
+                
                 elif choice == "e":
                     choice = input("Enter Passcode: ")
                     if choice == passcode:
@@ -360,6 +487,10 @@ def Phone():
                         print("You enter the passcode...")
                         time.sleep(2)
                         print("..Your Phone shines red, you got it wrong...")
+            
+                elif choice == "f":
+                    save()
+                    print("Game Saved Successfully\n")
             else:
                 print(str(name)+": I shouldn't be on my phone right now, I need to get ethan to The nurse")
                 time.sleep(1)
@@ -409,9 +540,50 @@ def Phone():
             quit()
             
 #start of game
-name = input("What is your name? ").capitalize()
+savepath = Path("./savedata.txt")
+datapath = Path("./gamedata.txt")
+
+#checks if the savedata file exists and makes the file and adds default values 
+# if it does not exist
+if(savepath.is_file() == False):
+    f = open("savedata.txt", "w")
+    f.write("vena_cava: False\n")
+    f.write("hallway1: False\n")
+    f.write("liddle: True\n")
+    f.write("hallway2: False\n")
+    f.write("haslighter: False\n")
+    f.write("hallway3: False\n")
+    f.write("hasbroom: False\n")
+    f.write("boysroom: False\n")
+    f.write("janitors: False\n")
+    f.write("hallway4: False\n")
+    f.write("detention: False\n")
+    f.write("teachers: False\n")
+    f.write("homework: False\n")
+    f.write("question: 1\n")
+    f.write("osbornquest: False\n")
+    f.write("skeletonkey: False\n")
+    f.write("juvenile: False\n")
+    f.write("hasphone: False\n")
+    f.write("exited: False\n")
+    f.write("passcode: " + passcode + "\n")
+    f.write("firsttime: True\n")
+    f.write("nurse: False\n")
+    f.close()
+
+#checks if the gamedata file exists and makes it if it doesn't
+if(datapath.is_file() == False):
+    f = open("gamedata.txt", "w")
+    f.close()
+
+#loads saved data
+load()
+
 while True:
+    
     if FirstTime == True:
+        name = input("What is your name? ").capitalize()
+
         #Variables
         vena_cava = bool(False)
         hasLighter = bool(False)
@@ -444,15 +616,16 @@ while True:
         Detention = bool(False)
         Teachers = bool(False)
 
+        password()
 
-        global inventory
-        inventory = []
-        inventory.append("phone")
+        inventory.append("Phone")
 
         print("You wake up in from a deep slumber, you are in class and you want to escape school")
         time.sleep(1)
 
         FirstTime = False
+
+        save()
 
     #Runs in mr liddle's classroom
     while liddle == True:
@@ -465,12 +638,15 @@ while True:
         print("Phone - Look at your phone")
         print("--------------------------------------------------------")
         choice = input("").lower()
+
         if choice == "clock":
             print(name+": 11:99 AM, 3/5/23, wow, I wonder what the world will be like ten years from now")
             time.sleep(2)
+        
         elif choice == "inventory":
             print(*inventory, sep=', ')
             time.sleep(3)
+        
         elif choice == "ethan":
             print("Ethan: Okay dude, what do you want now?")
             time.sleep(3)
@@ -1058,6 +1234,7 @@ while True:
         elif hasPhone == True:
             if choice == "phone":
                 Phone()
+    
     #Runs in Janitor's Closet
     while janitors == True:
         time.sleep(1)
@@ -1390,8 +1567,7 @@ while True:
         elif hasPhone == True:
             if choice == "phone":
                 Phone()
-
-            
+           
     # Runs in Teachers Lounge
     while Teachers == True:
         time.sleep(1)
