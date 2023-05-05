@@ -41,6 +41,8 @@ def load():
     global name
     global Nurse
     global inventory
+    global PresleysMachine
+    global BrokenMachine
     inventory = []
 
     #opens the savedata file
@@ -123,6 +125,12 @@ def load():
             inventory = line.replace("inventory: ", "")
             inventory = inventory.replace("\n", "")
             inventory = ast.literal_eval(inventory)
+        if("presleysmachine: " in line):
+            PresleysMachine = line.replace("presleysmachine: ", "")
+            PresleysMachine = ast.literal_eval(PresleysMachine.replace("\n", ""))
+        if("brokenmachine: " in line):
+            BrokenMachine = line.replace("brokenmachine: ", "")
+            BrokenMachine = ast.literal_eval(BrokenMachine.replace("\n", ""))
 
 def save():
     #opens savedata file
@@ -154,6 +162,8 @@ def save():
     f.write("nurse: " + str(Nurse) + "\n")
     f.write("name: " + str(name) + "\n")
     f.write("inventory: " + str(inventory) + "\n")
+    f.write("presleysmachine: " + str(PresleysMachine) + "\n")
+    f.write("brokenmachine: " + str(BrokenMachine) + "\n")
 
 def displaymap():
     #checks which area you are in and displays different map depending on where you are
@@ -568,6 +578,8 @@ if(savepath.is_file() == False):
     f.write("passcode: 6969\n")
     f.write("firsttime: True\n")
     f.write("nurse: False\n")
+    f.write("presleysmachine: False\n")
+    f.write("brokenmachine: False\n")
     f.close()
 
 #checks if the gamedata file exists and makes it if it doesn't
@@ -1468,9 +1480,26 @@ while True:
         choice = input("").lower()
 
         if choice == "a":
-            print("Mr Stevenson: You can't be in here, get out!")
-            Detention = False
-            hallway4 = True
+            print("Mr Stevenson: Hey you! What are you doing here!")
+            print("--------------------------------------------------------")
+            print("A - How do you keep your bald head so shimmering and spotless?")
+            print("B - Have you seen the matterlove anywhere?")
+            print("--------------------------------------------------------")
+            choice = input("").lower()
+
+            if choice == "a":
+                print("I put some hand sanitiser on a sponge and give it a good ol' scrub")
+            elif choice == "b":
+                print("Mr Stevenson: Maybe, what's the matterlove?")
+                time.sleep(2)
+                print(name+": Nothing much, what's the matter with you?")
+                time.sleep(2)
+                print("Mr Stevenson: ...")
+                time.sleep(1)
+                print("Mr Stevenson: Do you want to join Scott and Leo?")
+
+                Detention = False
+                hallway4 = True
         elif choice == "b":
             print("--------------------------------------------------------")
             print("A - Why are you in detention?")
