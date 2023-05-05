@@ -9,6 +9,7 @@ import ast
 
 #generates passcode
 def password():
+    global passcode
     pas1 = str(random.randint(0,9))
     pas2 = str(random.randint(0,9)) 
     pas3= str(random.randint(0,9))
@@ -37,7 +38,6 @@ def load():
     global hasPhone
     global Exited
     global FirstTime
-    global passcode
     global name
     global Nurse
     global inventory
@@ -123,7 +123,6 @@ def load():
             inventory = line.replace("inventory: ", "")
             inventory = inventory.replace("\n", "")
             inventory = ast.literal_eval(inventory)
-            print(type(inventory))
 
 def save():
     #opens savedata file
@@ -543,6 +542,7 @@ def Phone():
 savepath = Path("./savedata.txt")
 datapath = Path("./gamedata.txt")
 
+password()
 #checks if the savedata file exists and makes the file and adds default values 
 # if it does not exist
 if(savepath.is_file() == False):
