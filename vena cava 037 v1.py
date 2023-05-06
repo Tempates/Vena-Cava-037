@@ -6,7 +6,6 @@ import os
 from pathlib import Path
 import ast
 
-
 #generates passcode
 def password():
     global passcode
@@ -43,11 +42,21 @@ def load():
     global inventory
     global PresleysMachine
     global BrokenMachine
+    global hasJuvenile
+    global hasInsanity
+    global hasMcintyre
+    global hasPresley
+    global janitorMoney
+    global leosMoney
     inventory = []
 
     #opens the savedata file
     f = open("savedata.txt", "r")
-    #read variables from file
+
+    #opens the gamedata file
+    g = open("gamedata.txt", "r")
+
+    #read variables from savedata file
     for line in f:
 
         if("vena_cava: " in line):
@@ -131,12 +140,32 @@ def load():
         if("brokenmachine: " in line):
             BrokenMachine = line.replace("brokenmachine: ", "")
             BrokenMachine = ast.literal_eval(BrokenMachine.replace("\n", ""))
+        if("janitormoney: " in line):
+            janitorMoney = line.replace("janitormoney: ", "")
+            janitorMoney = ast.literal_eval(janitorMoney.replace("\n", ""))
+        if("leosmoney: " in line):
+            leosMoney = line.replace("leosmoney: ", "")
+            leosMoney = ast.literal_eval(leosMoney.replace("\n", ""))
+    
+    for line in g:
+        if("hasjuvenile: " in line):
+            hasJuvenile = line.replace("hasjuvenile: ", "")
+            hasJuvenile = ast.literal_eval(hasJuvenile.replace("\n", ""))
+        if("hasinsanity: " in line):
+            hasInsanity = line.replace("hasinsanity: ", "")
+            hasInsanity = ast.literal_eval(hasInsanity.replace("\n", ""))
+        if("hasmcintyre: " in line):
+            hasMcintyre = line.replace("hasmcintyre: ", "")
+            hasMcintyre = ast.literal_eval(hasMcintyre.replace("\n", ""))
+        if("haspresley: " in line):
+            hasPresley = line.replace("haspresley: ", "")
+            hasPresley = ast.literal_eval(hasPresley.replace("\n", ""))
 
 def save():
     #opens savedata file
     f = open("savedata.txt", 'w')
 
-    #writes variables to file
+    #writes variables to savedata file
 
     f.write("vena_cava: " + str(vena_cava) + "\n")
     f.write("hallway1: " + str(hallway1) + "\n")
@@ -164,6 +193,20 @@ def save():
     f.write("inventory: " + str(inventory) + "\n")
     f.write("presleysmachine: " + str(PresleysMachine) + "\n")
     f.write("brokenmachine: " + str(BrokenMachine) + "\n")
+    f.write("janitormoney: " + str(janitorMoney) + "\n")
+    f.write("leosmoney: " + str(leosMoney) + "\n")
+    f.close()
+
+def saveData():
+    #writes variables to gamedata file
+    print("i save")
+    g = open("gamedata.txt", 'w')
+
+    g.write("hasjuvenile: " + str(hasJuvenile) + "\n")
+    g.write("hasinsanity: " + str(hasInsanity) + "\n")
+    g.write("hasmcintyre: " + str(hasMcintyre) + "\n")
+    g.write("haspresley: " + str(hasPresley) + "\n")
+    g.close()
 
 def displaymap():
     #checks which area you are in and displays different map depending on where you are
@@ -580,11 +623,17 @@ if(savepath.is_file() == False):
     f.write("nurse: False\n")
     f.write("presleysmachine: False\n")
     f.write("brokenmachine: False\n")
+    f.write("janitormoney: False\n")
+    f.write("leosmoney: False\n")
     f.close()
 
 #checks if the gamedata file exists and makes it if it doesn't
 if(datapath.is_file() == False):
     f = open("gamedata.txt", "w")
+    f.write("hasjuvenile: False\n")
+    f.write("hasinsanity: False\n")
+    f.write("hasmcintyre: False\n")
+    f.write("haspresley: False\n")
     f.close()
 
 #loads saved data
@@ -746,6 +795,7 @@ while True:
                     
                 if Juvenile == False and hasLighter == False:
                     # NORMAL ENDING #
+                    saveData()
                     time.sleep(1)
                     print("You open up the pearly gates and the sun is shining on your face")
                     time.sleep(3)
@@ -802,6 +852,8 @@ while True:
                     time.sleep(3)
                     print("Mr Stevenson: You're going to juvenile prison for a long long time")
                     time.sleep(4)
+                    hasJuvenile = True
+                    saveData()
                     print("--------------------------------------------------------")
                     print("Uh Oh! Ethan McLean caught you escaping school, he did warn you to lay off, bad idea telling him you wanted to escape school")
                     print("You achieved: The JUVENILE Ending")
@@ -833,6 +885,8 @@ while True:
                         break
                 elif Juvenile == True and hasLighter == True:
                     # INSANITY ENDING #
+                    hasInsanity = bool(True)
+                    saveData()
                     time.sleep(1)
                     print("You Open up the pearly gates and the sun is shining on your face")
                     time.sleep(3)
@@ -906,6 +960,7 @@ while True:
 
                 elif Juvenile == False and hasLighter == True:
                     # NORMAL ENDING #
+                    saveData()
                     time.sleep(1)
                     print("You open up the pearly gates and the sun is shining on your face")
                     time.sleep(3)
@@ -1131,10 +1186,14 @@ while True:
             hallway4 = True
         elif choice == "south":
             if SkeletonKey == False:
-                print("It's locked")
+                if hasMcintyre == False:
+                    print("It's locked")
+                else:
+                    print("You hear screaming and banging coming from there.. What is going down?")
             else:
                 # MCINTYRE'S ENDING #
-
+                hasMcintyre = True
+                saveData()
                 print(str(name)+": Wait a minute, I've got a skeleton key, so do you think I'll be able to enter?")
                 time.sleep(3)
                 print("To your surprise, it works! you are greeted with a dark staircase going down, you decide to go down")
@@ -1334,7 +1393,9 @@ while True:
                                     Date = str(Day)+str(Month)+str(Year)
                                     if Date == "352033":
                                         PresleysMachine = False
-                                        #MY GUY ENDING
+                                        #PRESLEY'S ENDING
+                                        hasPresley = bool(True)
+                                        saveData()
                                         print("The machine starts to rumble, and you feel the ground beneath you fade away")
                                         time.sleep(4)
                                         print("The screen on the machine turns white, and you wake up on the ground")
@@ -1757,7 +1818,10 @@ while True:
                     time.sleep(2)
                             
         elif choice == "c":
-            print("You look out the window, and you see Mr McIntyre dragging a human shaped bag into a vault, strange.")
+            if hasMcintyre == False:
+                print("You look out the window, and you see Mr McIntyre dragging a human shaped bag into a vault, strange.")
+            else:
+                print("You look out the window, and you see Mr McIntyre with a fungus sample wrapped in aluminum foil, strange.")
             time.sleep(5)
         elif choice == "south":
             Teachers = False
