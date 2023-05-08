@@ -598,6 +598,8 @@ datapath = Path("./gamedata.txt")
 #checks if the savedata file exists and makes the file and adds default values 
 # if it does not exist
 if(savepath.is_file() == False):
+    password()
+
     f = open("savedata.txt", "w")
     f.write("vena_cava: False\n")
     f.write("hallway1: False\n")
@@ -618,7 +620,7 @@ if(savepath.is_file() == False):
     f.write("juvenile: False\n")
     f.write("hasphone: False\n")
     f.write("exited: False\n")
-    f.write("passcode: 6969\n")
+    f.write("passcode: " + passcode + "\n")
     f.write("firsttime: True\n")
     f.write("nurse: False\n")
     f.write("presleysmachine: False\n")
@@ -675,8 +677,6 @@ while True:
         janitors = bool(False)
         Detention = bool(False)
         Teachers = bool(False)
-
-        password()
 
         inventory.append("Phone")
 
