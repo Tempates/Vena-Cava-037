@@ -208,6 +208,37 @@ def saveData():
     g.write("haspresley: " + str(hasPresley) + "\n")
     g.close()
 
+def resetSave():
+    f = open("savedata.txt", "w")
+    f.write("vena_cava: False\n")
+    f.write("hallway1: False\n")
+    f.write("liddle: True\n")
+    f.write("hallway2: False\n")
+    f.write("haslighter: False\n")
+    f.write("hallway3: False\n")
+    f.write("hasbroom: False\n")
+    f.write("boysroom: False\n")
+    f.write("janitors: False\n")
+    f.write("hallway4: False\n")
+    f.write("detention: False\n")
+    f.write("teachers: False\n")
+    f.write("homework: False\n")
+    f.write("question: 1\n")
+    f.write("osbornquest: False\n")
+    f.write("skeletonkey: False\n")
+    f.write("juvenile: False\n")
+    f.write("hasphone: False\n")
+    f.write("exited: False\n")
+    f.write("passcode: " + passcode + "\n")
+    f.write("firsttime: True\n")
+    f.write("nurse: False\n")
+    f.write("presleysmachine: False\n")
+    f.write("brokenmachine: False\n")
+    f.write("janitormoney: False\n")
+    f.write("leosmoney: False\n")
+    f.close()
+
+
 def displaymap():
     #checks which area you are in and displays different map depending on where you are
     if(hallway1 == True):
@@ -549,6 +580,7 @@ def Phone():
     else:
         if Abduction == True:
             # ABDUCTION ENDING
+            resetSave()
             print("You walk out of the school, somethings off...")
             time.sleep(3)
             print("You hear whirling in the distance, it's getting louder")
@@ -600,35 +632,8 @@ datapath = Path("./gamedata.txt")
 if(savepath.is_file() == False):
     password()
 
-    f = open("savedata.txt", "w")
-    f.write("vena_cava: False\n")
-    f.write("hallway1: False\n")
-    f.write("liddle: True\n")
-    f.write("hallway2: False\n")
-    f.write("haslighter: False\n")
-    f.write("hallway3: False\n")
-    f.write("hasbroom: False\n")
-    f.write("boysroom: False\n")
-    f.write("janitors: False\n")
-    f.write("hallway4: False\n")
-    f.write("detention: False\n")
-    f.write("teachers: False\n")
-    f.write("homework: False\n")
-    f.write("question: 1\n")
-    f.write("osbornquest: False\n")
-    f.write("skeletonkey: False\n")
-    f.write("juvenile: False\n")
-    f.write("hasphone: False\n")
-    f.write("exited: False\n")
-    f.write("passcode: " + passcode + "\n")
-    f.write("firsttime: True\n")
-    f.write("nurse: False\n")
-    f.write("presleysmachine: False\n")
-    f.write("brokenmachine: False\n")
-    f.write("janitormoney: False\n")
-    f.write("leosmoney: False\n")
-    f.close()
-
+    resetSave()
+    
 #checks if the gamedata file exists and makes it if it doesn't
 if(datapath.is_file() == False):
     f = open("gamedata.txt", "w")
@@ -796,6 +801,7 @@ while True:
                 if Juvenile == False and hasLighter == False:
                     # NORMAL ENDING #
                     saveData()
+                    resetSave()
                     time.sleep(1)
                     print("You open up the pearly gates and the sun is shining on your face")
                     time.sleep(3)
@@ -833,6 +839,7 @@ while True:
                         
                 elif Juvenile == True and hasLighter == False:
                     # JUVENILE ENDING #
+                    resetSave()
                     time.sleep(1)
                     print("You open up the pearly gates and the sun is shining on your face")
                     time.sleep(3)
@@ -885,6 +892,7 @@ while True:
                         break
                 elif Juvenile == True and hasLighter == True:
                     # INSANITY ENDING #
+                    resetSave()
                     hasInsanity = bool(True)
                     saveData()
                     time.sleep(1)
@@ -960,6 +968,7 @@ while True:
 
                 elif Juvenile == False and hasLighter == True:
                     # NORMAL ENDING #
+                    resetSave()
                     saveData()
                     time.sleep(1)
                     print("You open up the pearly gates and the sun is shining on your face")
@@ -1194,6 +1203,7 @@ while True:
                 # MCINTYRE'S ENDING #
                 hasMcintyre = True
                 saveData()
+                resetSave()
                 print(str(name)+": Wait a minute, I've got a skeleton key, so do you think I'll be able to enter?")
                 time.sleep(3)
                 print("To your surprise, it works! you are greeted with a dark staircase going down, you decide to go down")
@@ -1396,6 +1406,7 @@ while True:
                                         #PRESLEY'S ENDING
                                         hasPresley = bool(True)
                                         saveData()
+                                        resetSave()
                                         print("The machine starts to rumble, and you feel the ground beneath you fade away")
                                         time.sleep(4)
                                         print("The screen on the machine turns white, and you wake up on the ground")
